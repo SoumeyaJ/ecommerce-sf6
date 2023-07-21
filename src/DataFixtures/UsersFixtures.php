@@ -9,6 +9,7 @@ use phpDocumentor\Reflection\Types\This;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasher;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Faker;
+
 class UsersFixtures extends Fixture
 {
 
