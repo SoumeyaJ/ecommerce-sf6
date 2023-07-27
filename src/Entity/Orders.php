@@ -97,7 +97,7 @@ class Orders
         return $this->ordersDetails;
     }
 
-    public function addOrdersDetail(OrdersDetails $ordersDetail): static
+    public function addOrdersDetails(OrdersDetails $ordersDetail): static
     {
         if (!$this->ordersDetails->contains($ordersDetail)) {
             $this->ordersDetails->add($ordersDetail);

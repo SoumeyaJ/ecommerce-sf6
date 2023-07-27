@@ -28,8 +28,14 @@ class Products
     #[ORM\Column]
     private ?int $stock = null;
 
-    #[ORM\Column(type: 'datetime_immutable', options: ['default' => 'CURRENT_TIMESTAMP'])] 
+   #[ORM\Column(type: 'datetime_immutable', options: ['default' => 'CURRENT_TIMESTAMP'])]
     private ?\DateTimeImmutable $created_at = null;
+
+    //#[ORM\Column(type: 'datetime_immutable', options: ['default' => 'CURRENT_TIMESTAMP'], nullable: true)]
+    //private ?\DateTimeImmutable $created_at = null;
+
+    //#[ORM\Column(options: ['default' => 'CURRENT_TIMESTAMP'] )]
+    //private ?\DateTimeImmutable $created_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
     #[ORM\JoinColumn(nullable: false)]
@@ -44,7 +50,7 @@ class Products
     public function __construct()
     {
         $this->images = new ArrayCollection();
-        // $this->created_at = new \DateTimeImmutable();
+        $this->created_at = new \DateTimeImmutable();
         $this->ordersDetails = new ArrayCollection();
     }
 

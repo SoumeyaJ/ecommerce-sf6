@@ -56,7 +56,8 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     {
         $this->orders = new ArrayCollection();
         $this->created_at = new \DateTimeImmutable();
-        //DateTimeImmutable ne va pas changer la date dans l'objet mais dans la copie pour éviter d'avoir des problèmes de comparaison de date///// et pas DateTime 
+        //DateTimeImmutable ne va pas changer la date dans l'objet mais dans la copie pour
+        //éviter d'avoir des problèmes de comparaison de date///// et pas DateTime 
     }
 
    

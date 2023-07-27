@@ -6,7 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/admin/utilisateurs', name:'admin_users_')]
+#[Route('/admin/utilisateurs', name:'adminusers')]
 class UsersController extends AbstractController
 {
     #[Route('/', name:'index')]
@@ -14,3 +14,4 @@ class UsersController extends AbstractController
         return $this->render('admin/users/index.html.twig');
     }
 }
+
